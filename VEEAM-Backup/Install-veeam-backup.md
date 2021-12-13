@@ -1,10 +1,10 @@
 # Hướng dẫn cài đặt Veeam Backup & Replication
-Hệ điều hành: Windows XP / Vista / 7/8 / 8.1 / 10
-Bộ nhớ (RAM): Yêu cầu 4 GB RAM.
-Dung lượng đĩa cứng: Cần 4 GB dung lượng trống.
-Bộ xử lý: Bộ xử lý Intel Dual Core trở lên.
-VMware infrastructure: vSphere 6.x, vSphere 5.x, ESXi 6.x, ESXi 5.x, vCenter Server 6.x (optional), vCenter Server 5.x (optional), vCloud Director 8.x, and 9.x (optional)
-Tất cả các hệ điều hành được hỗ trợ bởi VMware
+* Hệ điều hành: Windows XP / Vista / 7/8 / 8.1 / 10
+* Bộ nhớ (RAM): Yêu cầu 4 GB RAM.
+* Dung lượng đĩa cứng: Cần 4 GB dung lượng trống.
+* Bộ xử lý: Bộ xử lý Intel Dual Core trở lên.
+* VMware infrastructure: vSphere 6.x, vSphere 5.x, ESXi 6.x, ESXi 5.x, vCenter Server 6.x (optional), vCenter Server 5.x (optional), vCloud Director 8.x, and 9.x (optional)
+* Tất cả các hệ điều hành được hỗ trợ bởi VMware
 
 ![image](/images/Screenshot_1.png)
 ![image](/images/Screenshot_2.png)

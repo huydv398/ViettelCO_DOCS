@@ -52,171 +52,53 @@ Quá trình cài đặt có thể mất từ 5-20p, Sau khi cài đặt xong nh�
 
 ![image](/images/Screenshot_10.png)
 
-
-![image](/images/Screenshot_11.png)
-
 Thực hiện tại **Task Manager** -> **Service**, thực Stop 2 dịch vụ sau:
 
 * VeeanBackupSvc:
 
-![image](/images/Screenshot_12.png)
-
+![image](/images/Screenshot_11.png)
 
 * VeeamCatalogSvc
 
+![image](/images/Screenshot_12.png)
 
+Tại thư mục giải nén Veeam One. Copy thư mục **Program Files**
 
 ![image](/images/Screenshot_13.png)
 
-Đi tới thư mục:  **C:\Program Files**
+Đi tới thư mục:  **C:**
 
-Thực hiện Paste thư mục **Program Files** đã copy ở bước trước. Nếu thực hiện lỗi(Reboot máy tính rồi thực hiện copy -paste thư mục **Program Files** từ folder **crack** đến folder **C:\Program Files**)
-
-Thực hiện chạy ứng ụng từ màn hình desktop.
+Thực hiện Paste thư mục **Program Files** đã copy ở bước trước. 
 
 
 ![image](/images/Screenshot_14.png)
 
-
+Thực hiện bật lại 2 service 
 
 ![image](/images/Screenshot_15.png)
 
-
+Thực hiện chạy ứng ụng từ màn hình desktop.
 
 ![image](/images/Screenshot_16.png)
 
-
+Thực hiện Update License
 
 ![image](/images/Screenshot_17.png)
 
-
+Chọn **Install License**
 
 ![image](/images/Screenshot_18.png)
 
-
+Chọn file **License.lic**
 
 ![image](/images/Screenshot_19.png)
 
-
+Thực hiện Update License thành công
 
 ![image](/images/Screenshot_20.png)
 
-
+Tổng quan giao diện Veeam Backup & Replication
 
 ![image](/images/Screenshot_21.png)
 
-
-
-![image](/images/Screenshot_22.png)
-
-
-
-![image](/images/Screenshot_23.png)
-
-
-
-![image](/images/Screenshot_24.png)
-
-
-
-![image](/images/Screenshot_25.png)
-
-
-
-![image](/images/Screenshot_26.png)
-
-
-
-![image](/images/Screenshot_27.png)
-
-
-
-![image](/images/Screenshot_28.png)
-
-
-
-![image](/images/Screenshot_29.png)
-
-
-
-![image](/images/Screenshot_30.png)
-
-
-
-![image](/images/Screenshot_31.png)
-
-
-
-![image](/images/Screenshot_32.png)
-
-
-
-![image](/images/Screenshot_33.png)
-
-
-
-![image](/images/Screenshot_34.png)
-
-
-
-![image](/images/Screenshot_35.png)
-
-
-
-![image](/images/Screenshot_36.png)
-
-
-
-![image](/images/Screenshot_37.png)
-
-
-
-![image](/images/Screenshot_38.png)
-
-
-
-![image](/images/Screenshot_39.png)
-
-
-
-![image](/images/Screenshot_40.png)
-
-
-
-![image](/images/Screenshot_41.png)
-
-
-
-![image](/images/Screenshot_42.png)
-
-
-
-![image](/images/Screenshot_43.png)
-
-
-
-![image](/images/Screenshot_44.png)
-
-
-
-![image](/images/Screenshot_45.png)
-
-
-
-![image](/images/Screenshot_46.png)
-
-
-
-![image](/images/Screenshot_47.png)
-
-
-
-![image](/images/Screenshot_48.png)
-
-
-
-![image](/images/Screenshot_49.png)
-
-
-
-![image](/images/Screenshot_50.png)
+Kết thúc

@@ -55,7 +55,7 @@ Chọn vị trí lưu:
 
 ![image](/images/Screenshot_50.png)
 
-### Advanced
+#### Advanced
 
 * Backup Settings
 * Maintenance Settings
@@ -66,4 +66,26 @@ Chọn vị trí lưu:
 
 * Storage
 
-**Compression level list**: Compression level list
+**Compression level list**: chọn mức nén cho bản sao lưuCompression level list
+![image](/images/Screenshot_51.png)
+* Notifications:
+
+**Send email notifications to the following recipients**: chọn hộp kiểm nếu bạn muốn nhận thông báo về trạng thái hoàn thành công việc qua email. Trong trường bên dưới, hãy chỉ định địa chỉ email của người nhận. Bạn có thể nhập một số địa chỉ được phân tách bằng dấu chấm phẩy.
+
+![image](/images/Screenshot_52.png)
+### Bước 9. Chỉ định cài đặt xử lý khách
+
+![image](/images/Screenshot_53.png)
+### Bước 10. Xác định lịch trình công việc
+
+Chọn hộp kiểm **Run the job automatically**. Nếu hộp kiểm này không được chọn, bạn sẽ phải bắt đầu công việc theo cách thủ công để tạo bản sao lưu VM. Hình bên dưới là thực hiện 4 ngày thứ 7 trong tháng vào lúc 10 giờ tối
+
+Phần **Automatic retry** xác định xem Veeam Backup & Replication có phải cố gắng chạy lại công việc sao lưu hay không nếu công việc không thành công vì lý do nào đó. Trong quá trình thử lại công việc, quy trình Sao lưu & nhân bản của Veeam chỉ các máy ảo không thành công. Nhập số lần thử thực hiện công việc và xác định khoảng thời gian giữa chúng. Nếu bạn chọn sao lưu liên tục, Veeam Backup & Replication sẽ thử lại công việc trong số lần xác định mà không có bất kỳ khoảng thời gian nào giữa các lần chạy công việc.
+
+
+![image](/images/Screenshot_54.png)
+### Bước 11 Kết thúc làm việc
+
+Chọn hộp kiểm Run the job when I click Finish nếu bạn muốn bắt đầu công việc ngay sau khi kết thúc thao tác với trình hướng dẫn.
+
+![image](/images/Screenshot_55.png)

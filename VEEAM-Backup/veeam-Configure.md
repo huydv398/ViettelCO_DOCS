@@ -53,11 +53,13 @@ Chọn vị trí lưu:
 
 ![image](/images/Screenshot_49.png)
 
-![image](/images/Screenshot_50.png)
 
 #### Advanced
 
 * Backup Settings
+
+
+![image](/images/Screenshot_50.png)
 * Maintenance Settings
 
 **Remove deleted items data after <N> days**: chỉ định số ngày bạn muốn giữ dữ liệu sao lưu cho các máy ảo đã xóa

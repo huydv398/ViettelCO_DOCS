@@ -8,7 +8,7 @@
 * **VMware infrastructure**: vSphere 6.x, vSphere 5.x, ESXi 6.x, ESXi 5.x, vCenter Server 6.x (optional), vCenter Server 5.x (optional), vCloud Director 8.x, and 9.x (optional)
 * Tất cả các hệ điều hành được hỗ trợ bởi VMware
 
-Tải VEEAM Backup theo đường dẫn, [tại đây](https://drive.google.com/file/d/1Y2N3jqScBqb1BGyobGX2Da7l87O60CPI/view).
+Tải VEEAM Backup theo đường dẫn, [tại đây](https://www.fshare.vn/file/74OV3HXVF7E4).
 
 ## Hướng dẫn cài đặt Veeam Backup & Replication
 * Giải nén phần mềm vừa Download.

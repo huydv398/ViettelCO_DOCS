@@ -108,6 +108,7 @@ Nhập thông tin đăng nhập của linux
 
 ![image](/images/Screenshot_38.png)
 
+Làm các bước như hình:
 
 
 ![image](/images/Screenshot_39.png)
@@ -116,8 +117,7 @@ Nhập thông tin đăng nhập của linux
 
 ![image](/images/Screenshot_40.png)
 
-
+Finish để kết thúc cài đặt
 
 ![image](/images/Screenshot_41.png)
-
 

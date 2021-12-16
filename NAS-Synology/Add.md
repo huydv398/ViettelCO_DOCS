@@ -69,3 +69,12 @@ sudo mount -t nfs 192.168.174.40:/volume1/Fileshare /DATA
 Tạo thành công sẽ được như sau:
 
 ![image](/images/Screenshot_116.png)
+
+## Add to Window
+Windows + r
+
+![image](/images/Screenshot_117.png)
+
+rồi map với This PC
+
+![image](/images/Screenshot_118.png)

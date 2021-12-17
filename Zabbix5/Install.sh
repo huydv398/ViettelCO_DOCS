@@ -17,7 +17,6 @@ Set_LAMP(){
 }
 Setup_C7(){
     yum update -y
-    yum install epel-release -y
     yum install chrony -y
     systemctl enable --now chronyd
     timedatectl set-timezone Asia/Ho_Chi_Minh
@@ -29,8 +28,7 @@ Setup_C7(){
     yum-config-manager --enable remi-php72
     yum install -y php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd
     systemctl disable firewalld
-    sudo systemctl stop firewalld
-    sudo systemctl stop firewalld
+    systemctl stop firewalld
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
     setenforce 0

@@ -22,10 +22,10 @@ Setup_C7(){
     systemctl enable --now chronyd
     timedatectl set-timezone Asia/Ho_Chi_Minh
     timedatectl set-local-rtc 0
-	hwclock --systohc
-	hostnamectl set-hostname zabbix
-	yum install -y epel-release yum-utils
-	yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    hwclock --systohc
+    hostnamectl set-hostname zabbix
+    yum install -y epel-release yum-utils
+    yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     yum-config-manager --enable remi-php72
     yum install -y php php-common php-opcache php-mcrypt php-cli php-gd php-curl php-mysqlnd
     systemctl disable firewalld

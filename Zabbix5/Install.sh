@@ -18,8 +18,6 @@ Set_LAMP(){
 Setup_C7(){
     yum update -y
     yum install epel-release -y
-    yum -y install byobu
-    byobu
     yum install chrony -y
     systemctl enable --now chronyd
     timedatectl set-timezone Asia/Ho_Chi_Minh

@@ -98,12 +98,12 @@ then
     # then 
     
     # fi
-    set -e
+    # set -e
     Set_LAMP
-    Setup_C7
-    install_mariadb
-    config_zb
-    systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
-    systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
+    # Setup_C7
+    # install_mariadb
+    # config_zb
+    # systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
+    # systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
 
 fi

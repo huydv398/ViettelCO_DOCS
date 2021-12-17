@@ -99,8 +99,8 @@ then
     
     # fi
     # set -e
-    Set_LAMP
-    # Setup_C7
+    # Set_LAMP
+    Setup_C7
     # install_mariadb
     # config_zb
     # systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm

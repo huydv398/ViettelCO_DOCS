@@ -74,8 +74,7 @@ config_zb(){
     
     sed -i -e "s/; php_value[date.timezone] = Europe/Riga/php_value[date.timezone] = Asia/Ho_Chi_Minh/g" /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
     zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u$username -p$userpassword
-    # sed -i -e "s/# DBHost=localhost/DBHost=localhost/g; s/DBName=zabbix/DBName="$databasename"/g; s/DBUser=zabbix/DBUser="$username"/g; s/# DBPassword=/DBPassword="$userpassword"/g  " /etc/zabbix/zabbix_server.conf
-    # sed -i -e "s/database_name_here/"php_value[date.timezone] = Asia/Ho_Chi_Minh"/g" /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+    sed -i -e "s/# DBHost=localhost/DBHost=localhost/g; s/DBName=zabbix/DBName="$databasename"/g; s/DBUser=zabbix/DBUser="$username"/g; s/# DBPassword=/DBPassword="$userpassword"/g  " /etc/zabbix/zabbix_server.conf
 }
 # install_mariadb
 
@@ -98,8 +97,8 @@ then
     # fi
     # set -e
     # Set_LAMP
-    Setup_C7
-    # install_mariadb
+    # Setup_C7
+    install_mariadb
     # config_zb
     # systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
     # systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm

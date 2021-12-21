@@ -10,11 +10,18 @@ then
     yum -y remove mariadb mariadb-server 
     rm -rf /var/lib/mysql  
 fi
+
+
+#Set LAMP
 Set_LAMP(){
     yum install -y httpd
     systemctl start httpd
     systemctl enable httpd
+    echo -e "\nIntalled HTTP ..... \n" && sleep 5
 }
+
+
+#Setup_initial 
 Setup_C7(){
     yum update -y
     yum install chrony -y
@@ -22,7 +29,7 @@ Setup_C7(){
     timedatectl set-timezone Asia/Ho_Chi_Minh
     timedatectl set-local-rtc 0
     hwclock --systohc
-    hostnamectl set-hostname zabbix
+    hostnamectl set-hostname zabbix-srv
     yum install -y epel-release yum-utils
     yum install -y http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     yum-config-manager --enable remi-php72
@@ -32,31 +39,24 @@ Setup_C7(){
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/sysconfig/selinux
     sed -i 's/SELINUX=enforcing/SELINUX=disabled/g' /etc/selinux/config
     setenforce 0
+    echo -e ">>>\n Done Setup Initail...\n>>>" && sleep 5
 }
 
 # config_mariadb
-
 install_mariadb(){
-    cat <<EOF | sudo tee /etc/yum.repos.d/MariaDB.repo
-    [mariadb]
-    name = MariaDB
-    baseurl = http://yum.mariadb.org/10.4/centos7-amd64
-    gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
-    gpgcheck=1
-EOF
+
+    echo -e "[mariadb]\nname = MariaDB\nbaseurl = http://yum.mariadb.org/10.4/centos7-amd64\ngpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB\ngpgcheck=1" >> /etc/yum.repos.d/MariaDB.repo
     sudo yum makecache fast
     yum -y install MariaDB-server MariaDB-client
     systemctl enable --now mariadb
-    echo -e "\ny\n$mysqlRootPass\n$mysqlRootPass\ny\ny\ny\ny\ny\n" |mysql_secure_installation --stdin
-    mysql -u root -p$mysqlRootPass<<EOF 
-    CREATE DATABASE $databasename CHARACTER SET UTF8 COLLATE UTF8_BIN;
-    CREATE USER $username@$host IDENTIFIED BY '$userpassword';
-    GRANT ALL PRIVILEGES ON $databasename.* TO $username@$host IDENTIFIED BY '$userpassword';
-    FLUSH PRIVILEGES;
-    exit
-EOF
-    
+    echo -e "\ny\ny\n$mysqlRootPass\n$mysqlRootPass\ny\ny\ny\ny\ny\n" | mysql_secure_installation
+
+
+    echo -e "CREATE DATABASE $databasename CHARACTER SET UTF8 COLLATE UTF8_BIN;\nCREATE USER $username@$host IDENTIFIED BY '$userpassword';\nGRANT ALL PRIVILEGES ON $databasename.* TO $username@$host IDENTIFIED BY '$userpassword';\nFLUSH PRIVILEGES;\nexit" | mysql -u root -p$mysqlRootPass
+    echo 
 }
+
+
 # Install_zb
 
 config_zb(){
@@ -71,12 +71,15 @@ config_zb(){
     
     sed -i '11 d' /etc/yum.repos.d/zabbix.repo
     sed -i '10 a enabled=1' /etc/yum.repos.d/zabbix.repo
+
+    sed -i '$ d' /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
+    sed -i '$ a php_value[date.timezone] = Asia/Ho_Chi_Minh' /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
     
-    sed -i -e "s/; php_value[date.timezone] = Europe/Riga/php_value[date.timezone] = Asia/Ho_Chi_Minh/g" /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
-    zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u$username -p$userpassword
-    sed -i -e "s/# DBHost=localhost/DBHost=localhost/g; s/DBName=zabbix/DBName="$databasename"/g; s/DBUser=zabbix/DBUser="$username"/g; s/# DBPassword=/DBPassword="$userpassword"/g  " /etc/zabbix/zabbix_server.conf
+    zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u$username -p$userpassword zabbix
+    sed -i "s/# DBHost=localhost/DBHost=localhost/g; s/DBName=zabbix/DBName="$databasename"/g; s/DBUser=zabbix/DBUser="$username"/g; s/# DBPassword=/DBPassword="$userpassword"/g  " /etc/zabbix/zabbix_server.conf
+    echo -e ">>>\nDone Setup Zabbix .....\n" && sleep 5
 }
-# install_mariadb
+
 
 if [ "$OS"="CentOS" ]
 then
@@ -84,23 +87,13 @@ then
     databasename="zabbix"
     username="zabbix"
     userpassword="p123@@123"
-    host="localhost"   
-    # read -p "Nhập mật khẩu cho mysqlroot: " mysqlRootPass
-    # read -p "Nhập tên cho Database: " databasename
-    # read -p "Nhập Database username: " username
-    # read -p "Nhập Database password username: " userpassword
-    # read -p "Nhập MatiaDB host: (Enter for localhost):" host
-
-    # if [ "$host" = "" ]
-    # then 
-    
-    # fi
-    # set -e
-    # Set_LAMP
-    # Setup_C7
+    host="localhost"
+    Set_LAMP
+    Setup_C7
     install_mariadb
-    # config_zb
-    # systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
-    # systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
-
+    config_zb
+    systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
+    systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
+    systemctl restart httpd
+    echo -e "Truy cập theo đường dẫn http://ip-address/zabbix. \nRồi thực hiện cấu hình với các thông in sau.\nDatabase port: 3306\nDatabase name: zabbix\nUser: zabbix\n Password: Pw123@@123\n\nZabbix Name: zabbix-srv\nHoàn thành..."
 fi

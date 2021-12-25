@@ -75,7 +75,7 @@ config_zb(){
     sed -i '$ d' /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
     sed -i '$ a php_value[date.timezone] = Asia/Ho_Chi_Minh' /etc/opt/rh/rh-php72/php-fpm.d/zabbix.conf
     
-    zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u$username -p$userpassword zabbix
+    zcat /usr/share/doc/zabbix-server-mysql*/create.sql.gz | mysql -u$username -p$userpassword $databasename
     sed -i "s/# DBHost=localhost/DBHost=localhost/g; s/DBName=zabbix/DBName="$databasename"/g; s/DBUser=zabbix/DBUser="$username"/g; s/# DBPassword=/DBPassword="$userpassword"/g  " /etc/zabbix/zabbix_server.conf
     echo -e ">>>\nDone Setup Zabbix .....\n" && sleep 5
 }
@@ -86,7 +86,7 @@ then
     mysqlRootPass="P123@@123"
     databasename="zabbix"
     username="zabbix"
-    userpassword="p123@@123"
+    userpassword="Pw123@@123"
     host="localhost"
     Set_LAMP
     Setup_C7
@@ -96,4 +96,5 @@ then
     systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
     systemctl restart httpd
     echo -e "Truy cập theo đường dẫn http://ip-address/zabbix. \nRồi thực hiện cấu hình với các thông in sau.\nDatabase port: 3306\nDatabase name: zabbix\nUser: zabbix\n Password: Pw123@@123\n\nZabbix Name: zabbix-srv\nHoàn thành..."
+    echo -e "Thông tin đăng nhập: Admin/zabbix"
 fi

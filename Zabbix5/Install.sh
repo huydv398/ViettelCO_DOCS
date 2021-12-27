@@ -95,5 +95,7 @@ then
     systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
     systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
     systemctl restart httpd
-    echo -e "Truy cập theo đường dẫn http://ip-address/zabbix. \nRồi thực hiện cấu hình với các thông in sau.\nDatabase port: 3306\nDatabase name: zabbix\nUser: zabbix\n Password: $userpassword\n\nZabbix Name: zabbix-srv\nHoàn thành..."
+    IP=$(hostname -I |  awk '{print $1}')
+    hostname=$(hostname)
+    echo -e "Access link http://$IP/zabbix. \nInfomation:\nDatabase port: 3306\nDatabase name: $databasename\nUser: $username\n Password: $userpassword\n\nZabbix Name: $hostname\nLogin: Admin/zabbix"
 fi

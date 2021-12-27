@@ -97,5 +97,5 @@ then
     systemctl restart httpd
     IP=$(hostname -I |  awk '{print $1}')
     hostname=$(hostname)
-    echo -e "Access link http://$IP/zabbix. \nInfomation:\nDatabase port: 3306\nDatabase name: $databasename\nUser: $username\n Password: $userpassword\n\nZabbix Name: $hostname\nLogin: Admin/zabbix"
+    echo -e "Access link http://$IP/zabbix.\nInfomation:\nDatabase port: 3306\nDatabase name: $databasename\nUser: $username\nPassword: $userpassword\nZabbix Name: $hostname\nLogin: Admin/zabbix"
 fi

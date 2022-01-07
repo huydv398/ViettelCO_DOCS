@@ -95,18 +95,7 @@ then
     systemctl restart zabbix-server zabbix-agent httpd rh-php72-php-fpm
     systemctl enable zabbix-server zabbix-agent httpd rh-php72-php-fpm
     systemctl restart httpd
-<<<<<<< Updated upstream
     IP=$(hostname -I |  awk '{print $1}')
     hostname=$(hostname)
     echo -e "Access link http://$IP/zabbix.\nInfomation:\nDatabase port: 3306\nDatabase name: $databasename\nUser: $username\nPassword: $userpassword\nZabbix Name: $hostname\nLogin: Admin/zabbix"
-=======
-<<<<<<< HEAD
-    echo -e "Truy cập theo đường dẫn http://ip-address/zabbix. \nRồi thực hiện cấu hình với các thông in sau.\nDatabase port: 3306\nDatabase name: zabbix\nUser: zabbix\n Password: Pw123@@123\n\nZabbix Name: zabbix-srv\nHoàn thành..."
-    echo -e "Thông tin đăng nhập: Admin/zabbix"
-=======
-    IP=$(hostname -I |  awk '{print $1}')
-    hostname=$(hostname)
-    echo -e "Access link http://$IP/zabbix.\nInfomation:\nDatabase port: 3306\nDatabase name: $databasename\nUser: $username\nPassword: $userpassword\nZabbix Name: $hostname\nLogin: Admin/zabbix"
->>>>>>> 8ea5524929089b030e543f039f6525e6eee0d8dd
->>>>>>> Stashed changes
 fi

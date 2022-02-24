@@ -26,6 +26,8 @@ Vmware Workstation
 ### Công cụ vẽ các mô hình, diagram
 * [Draw.io](https://app.diagrams.net/) 
 * [Excalidraw](https://excalidraw.com/)
+### Công cụ bảo mật.
+* VPN: fortinet, Pfsence.
 ## 2. Các công cụ làm việc nhóm
 ### Quản lý task:
 Công cụ quản lý task, issue :

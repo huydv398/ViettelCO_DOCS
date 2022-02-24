@@ -7,6 +7,7 @@
 1. [Hướng dẫn thêm máy chủ vào Veeam Backup](/VEEAM-Backup/veeam-Add-host.md)
 1. [Hướng dẫn cài đặt kết hợp thiết bị NAS vật lý ](/VEEAM-Backup/veeam-Connect-NAS.md)
 1. [Hướng dẫn cấu hình Backup](/VEEAM-Backup/veeam-Configure.md)
+<!-- 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
@@ -15,5 +16,11 @@
 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
 1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
-1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
-1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md)
+1. [Hướng dẫn  ](/VEEAM-Backup/veeam.md) -->
+
+## Zabbix.
+[Script install zb5](/Zabbix5/Install.sh)
+
+## Tài liệu begin.
+
+1. [Các phần mềm công cụ](/software-begin.md)

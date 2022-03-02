@@ -21,6 +21,12 @@
 ## Zabbix.
 [Script install zb5](/Zabbix5/Install.sh)
 
+
+## NAS
+1. [Install NAS to VMware](/NAS-Synology/Install-nas.md)
+1. [Add NAS to PC](/NAS-Synology/Add.md)
+<!-- 1. []() -->
+
 ## Tài liệu begin.
 
 1. [Các phần mềm công cụ](/software-begin.md)

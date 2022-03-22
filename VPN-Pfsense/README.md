@@ -2,11 +2,11 @@
 Hướng dẫn tìm hiểu VPN và cấu hình VPN 
 
 ## Lý thuyết
-1. [Tổng quan về VPN](/VPN/DOCS/intro.md)
-1. [Các giao thức VPN sử dụng](/VPN/DOCS/VPN-protocols.md)
-1. [a](/VPN/DOCS/intro.md)
-1. [a](/VPN/DOCS/intro.md)
-1. [a](/VPN/DOCS/intro.md)
+1. [Tổng quan về VPN](/VPN-Pfsense/DOCS/intro.md)
+1. [Các giao thức VPN sử dụng](/VPN-Pfsense/DOCS/VPN-protocols.md)
+1. [Tìm hiểu tổng quan về Pfsense](/VPN-Pfsense/DOCS/1.intro-pfsense.md)
+1. [22.01/2.6.0 TÍnh năng mới và sự thay đổi](/VPN-Pfsense/DOCS/2.tinh-nang.md)
+1. [a](/VPN-Pfsense/DOCS/intro.md)
 
 ## Thực hành
 

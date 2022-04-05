@@ -30,3 +30,6 @@
 ## Tài liệu begin.
 
 1. [Các phần mềm công cụ](/software-begin.md)
+
+## Tài liệu hướng dẫn tìm hiểu pfSense [Tại đây](/VPN-Pfsense/README.md)
+

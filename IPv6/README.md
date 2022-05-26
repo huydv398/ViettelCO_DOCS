@@ -61,8 +61,6 @@ Tuy nhiên, địa chỉ IPv6 chứa dấu hai chấm làm dấu phân cách và
 ## 
 
 * [Link tham khảo](http://www.steves-internet-guide.com/ipv6-guide/#:~:text=An%20Ipv6%20address%20uses%20128,to%2032%20bits%20in%20IPv4.&text=Because%20an%20hexadecimal%20number%20uses,(colon)%20as%20a%20separator.)
-* 
-* 
 
 
 

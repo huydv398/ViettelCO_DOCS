@@ -41,3 +41,35 @@ Sau khi khởi tạo máy chủ thành công. thực hiện Note các thông tin
     ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled.png)
     
     ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%201.png)
+    
+    ## Hướng dẫn gắn IP đang có
+    
+    Thêm card mạng mà máy ảo sử dụng IP Public
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%202.png)
+    
+    Tạo Interface
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%203.png)
+    
+    Gắn địa chỉ IP
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%204.png)
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%205.png)
+    
+    Seach địa chỉ IP cần gắn
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%206.png)
+    
+    Chọn IP để gắn
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%207.png)
+    
+    Update để cập nhật thông tin
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%208.png)
+    
+    Thông tin sau khi gắn
+    
+    ![Untitled](Quy%20tri%CC%80nh%20kho%CC%9B%CC%89i%20ta%CC%A3o%20ma%CC%81y%20a%CC%89o%20-%20OPS%201e422e596cb441e3b0450fe89fb46741/Untitled%209.png)
